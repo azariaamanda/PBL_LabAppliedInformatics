@@ -338,126 +338,125 @@ nav a.active {
     transform: translateY(-2px);
 }
 
-/* Footer */
-footer {
-    background-color: #0A2346;
-    margin-top: 80px;
-    border-top: 8px solid #FF8C42;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
-    gap: 40px;
-    padding: 50px 60px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.footer-logo-section {
-    padding-right: 20px;
-}
-
-.footer-logo img {
-    height: 50px;
-    margin-bottom: 20px;
-    filter: brightness(0) invert(1);
-}
-
-.footer-desc {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.8;
-}
-
-.footer-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-section h4 {
+/* FOOTER */
+.footer {
+    background: #062247;
     color: #ffffff;
+    width: 100%;
+    margin-top: 80px;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+}
+
+/* GARIS ORANYE ATAS */
+.footer-top-border {
+    height: 10px;
+    background: #FF8C42;
+    width: 100%;
+}
+
+/* GARIS ORANYE BAWAH */
+.footer-bottom-border {
+    height: 6px;
+    background: #FF8C42;
+    width: 100%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 1.4fr;
+    gap: 45px;
+    padding: 50px 60px;
+}
+
+.footer-col ul {
+    list-style: none;      
+    padding-left: 0;        
+}
+
+/* BULLET PUTIH CUSTOM */
+.footer-col ul li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 8px;
     font-size: 14px;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-col ul li::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
 }
 
-.footer-section ul li {
+/* Menu warna putih */
+.footer-col a {
+    color: #ffffff;        
+    text-decoration: none; 
+}
+
+.footer-col a:hover {
+    color: #FF8C42;       
+}
+
+/* MAP */
+.footer-map {
+  width: 360px;
+  height: 210px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* KONTAK */
+.footer-right p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
-.footer-section ul a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
-    transition: color 0.2s;
+.footer-right p img {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
 }
 
-.footer-section ul a:hover {
-    color: #FF8C42;
-}
-
-.footer-section li {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-box {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact-box p {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.75);
-    margin: 0;
-    line-height: 1.6;
-}
-
+/* BOTTOM */
 .footer-bottom {
+    background: #031526;
+    padding: 12px 0;
     text-align: center;
-    padding: 18px 20px;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: #051829;
-    border-top: 2px solid #FF8C42;
+    font-size: 13px;
+    color: #ddd;
 }
 
-/* Responsive Footer */
-@media (max-width: 1024px) {
-    .footer-content {
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .footer-container {
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        padding: 40px;
-    }
-
-    .footer-logo-section {
-        grid-column: 1 / -1;
     }
 }
 
-@media (max-width: 768px) {
-    .footer-content {
+@media (max-width: 600px) {
+    .footer-container {
         grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 30px 20px;
+        padding: 40px 30px;
     }
 
-    .footer-logo-section {
-        grid-column: auto;
+    .footer {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .footer-map {
+        height: 150px;
     }
 }
 
