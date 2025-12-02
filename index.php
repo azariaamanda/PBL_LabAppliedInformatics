@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member - Laboratory of Applied Informatics</title>
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
@@ -135,15 +135,106 @@
     <!-- Asisten Laboratorium Section -->
     <div class="member-section">
         <h2>ASISTEN LABORATORIUM</h2>
-        <div class="assistant-grid">
+        <div class="research-grid">
             <!-- Assistant Card 1 -->
-            <div class="assistant-card">
+            <div class="research-card">
                 <div class="card-avatar">
                     <div class="card-avatar-circle">
                         <img src="img/avatar-default.png" alt="Avatar Asisten">
                     </div>
                 </div>
-                <div class="card-label">Asisten</div>
+                <div class="card-label">Anggota</div>
+                <div class="card-content">
+                    <h4>Andini Eka Amalia</h4>
+                    <p>D4 Sistem Informasi Bisnis</p>
+                    <a href="pages/profil.php">
+                        <button class="card-button">Profil</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Assistant Card 2 -->
+            <div class="research-card">
+                <div class="card-avatar">
+                    <div class="card-avatar-circle">
+                        <img src="img/avatar-default.png" alt="Avatar Asisten">
+                    </div>
+                </div>
+                <div class="card-label">Anggota</div>
+                <div class="card-content">
+                    <h4>Andini Eka Amalia</h4>
+                    <p>D4 Sistem Informasi Bisnis</p>
+                    <a href="pages/profil.php">
+                        <button class="card-button">Profil</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Assistant Card 3 -->
+            <div class="research-card">
+                <div class="card-avatar">
+                    <div class="card-avatar-circle">
+                        <img src="img/avatar-default.png" alt="Avatar Asisten">
+                    </div>
+                </div>
+                <div class="card-label">Anggota</div>
+                <div class="card-content">
+                    <h4>Andini Eka Amalia</h4>
+                    <p>D4 Sistem Informasi Bisnis</p>
+                    <a href="pages/profil.php">
+                        <button class="card-button">Profil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Magang Section -->
+    <div class="member-section">
+        <h2>MAGANG</h2>
+        <div class="research-grid">
+            <!-- Intern Card 1 -->
+            <div class="research-card">
+                <div class="card-avatar">
+                    <div class="card-avatar-circle">
+                        <img src="img/avatar-default.png" alt="Avatar Magang">
+                    </div>
+                </div>
+                <div class="card-label">Anggota</div>
+                <div class="card-content">
+                    <h4>Andini Eka Amalia</h4>
+                    <p>D4 Sistem Informasi Bisnis</p>
+                    <a href="pages/profil.php">
+                        <button class="card-button">Profil</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Intern Card 2 -->
+            <div class="research-card">
+                <div class="card-avatar">
+                    <div class="card-avatar-circle">
+                        <img src="img/avatar-default.png" alt="Avatar Magang">
+                    </div>
+                </div>
+                <div class="card-label">Anggota</div>
+                <div class="card-content">
+                    <h4>Andini Eka Amalia</h4>
+                    <p>D4 Sistem Informasi Bisnis</p>
+                    <a href="pages/profil.php">
+                        <button class="card-button">Profil</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Intern Card 3 -->
+            <div class="research-card">
+                <div class="card-avatar">
+                    <div class="card-avatar-circle">
+                        <img src="img/avatar-default.png" alt="Avatar Magang">
+                    </div>
+                </div>
+                <div class="card-label">Anggota</div>
                 <div class="card-content">
                     <h4>Andini Eka Amalia</h4>
                     <p>D4 Sistem Informasi Bisnis</p>
