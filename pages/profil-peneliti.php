@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Peneliti - Laboratory of Applied Informatics</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../style-common.css">
+    <link rel="stylesheet" href="../style-index.css">
     <style>
         body {
             background: #f6fafd;
@@ -224,16 +225,16 @@
         </div>
         <div class="nav-content">
             <div class="logo">
-                <a href="../index.php"><img src="../img/logo.png" alt="Laboratory of Applied Informatics"></a>
+                <a href="../index.php"><img src="../img/logo/logo.png" alt="Laboratory of Applied Informatics"></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="../index.php">Beranda</a></li>
-                    <li><a href="produk.html">Produk</a></li>
-                    <li><a href="anggota.html">Mitra</a></li>
-                    <li><a href="berita.html">Berita</a></li>
-                    <li><a href="galeri.html">Galeri</a></li>
-                    <li><a href="layanan.html">Layanan</a></li>
+                    <li><a href="produk.php">Produk</a></li>
+                    <li><a href="../index.php">Mitra</a></li>
+                    <li><a href="berita.php">Berita</a></li>
+                    <li><a href="galeri.php">Galeri</a></li>
+                    <li><a href="javascript:void(0);" onclick="return false;">Layanan</a></li>
                 </ul>
             </nav>
         </div>
@@ -242,7 +243,7 @@
 
 <!-- Hero Section -->
 <div class="hero">
-    <img src="../img/gedung-sipil.jpg" alt="Gedung Politeknik"/>
+    <img src="../img/logo/gedung-sipil.jpg" alt="Gedung Politeknik"/>
     <h1>PROFIL PENELITI</h1>
 </div>
 
@@ -354,11 +355,7 @@
     </div>
 </main>
 
-<!-- Footer Placeholder -->
-<div id="footer-placeholder"></div>
-
-<script src="../js/navigation.js"></script>
-<script src="../js/loader.js"></script>
+<?php include '../footer.html'; ?>
 
 </body>
 </html>

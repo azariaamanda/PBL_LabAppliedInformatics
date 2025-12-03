@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member - Laboratory of Applied Informatics</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <title>Beranda - Laboratory of Applied Informatics</title>
+    <link rel="stylesheet" href="style-common.css">
+    <link rel="stylesheet" href="style-index.css">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         </div>
         <div class="nav-content">
             <div class="logo">
-                <img src="img/logo.png" alt="Laboratory of Applied Informatics">
+                <img src="img/logo/logo.png" alt="Laboratory of Applied Informatics">
             </div>
 
             <nav>
@@ -46,7 +46,7 @@
 
 <!-- Hero Section -->
 <div class="hero">
-    <img src="img/gedung-sipil.jpg" alt="Gedung Politeknik"/>
+    <img src="img/logo/gedung-sipil.jpg" alt="Gedung Sipil Politeknik Negeri Malang"/>
     <h1>ANGGOTA</h1>
 </div>
 
@@ -145,7 +145,7 @@
                 </div>
                 <div class="card-label">Anggota</div>
                 <div class="card-content">
-                    <h4>Andini Eka Amalia</h4>
+                    <h4>Ahmad Zulkifli</h4>
                     <p>D4 Sistem Informasi Bisnis</p>
                     <a href="pages/profil.php">
                         <button class="card-button">Profil</button>
@@ -162,8 +162,8 @@
                 </div>
                 <div class="card-label">Anggota</div>
                 <div class="card-content">
-                    <h4>Andini Eka Amalia</h4>
-                    <p>D4 Sistem Informasi Bisnis</p>
+                    <h4>Rina Amelia</h4>
+                    <p>D4 Teknik Informatika</p>
                     <a href="pages/profil.php">
                         <button class="card-button">Profil</button>
                     </a>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="card-label">Anggota</div>
                 <div class="card-content">
-                    <h4>Andini Eka Amalia</h4>
+                    <h4>Fajar Nugroho</h4>
                     <p>D4 Sistem Informasi Bisnis</p>
                     <a href="pages/profil.php">
                         <button class="card-button">Profil</button>
@@ -202,9 +202,9 @@
                 </div>
                 <div class="card-label">Anggota</div>
                 <div class="card-content">
-                    <h4>Andini Eka Amalia</h4>
-                    <p>D4 Sistem Informasi Bisnis</p>
-                    <a href="pages/profil.php">
+                    <h4>Siti Fatimah</h4>
+                    <p>D3 Manajemen Informatika</p>
+                    <a href="pages/profil-magang.php">
                         <button class="card-button">Profil</button>
                     </a>
                 </div>
@@ -219,9 +219,9 @@
                 </div>
                 <div class="card-label">Anggota</div>
                 <div class="card-content">
-                    <h4>Andini Eka Amalia</h4>
-                    <p>D4 Sistem Informasi Bisnis</p>
-                    <a href="pages/profil.php">
+                    <h4>Eko Prasetyo</h4>
+                    <p>D3 Manajemen Informatika</p>
+                    <a href="pages/profil-magang.php">
                         <button class="card-button">Profil</button>
                     </a>
                 </div>
@@ -238,7 +238,7 @@
                 <div class="card-content">
                     <h4>Andini Eka Amalia</h4>
                     <p>D4 Sistem Informasi Bisnis</p>
-                    <a href="pages/profil.php">
+                    <a href="pages/profil-magang.php">
                         <button class="card-button">Profil</button>
                     </a>
                 </div>
@@ -248,11 +248,6 @@
 
 </main>
 
-<!-- Footer Placeholder -->
-<div id="footer-placeholder"></div>
-
-<script src="js/navigation.js"></script>
-<script src="js/loader.js"></script>
-
+<?php include 'footer.html'; ?>
 </body>
 </html>
