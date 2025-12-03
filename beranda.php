@@ -100,8 +100,8 @@
                                 <?php while($nav = pg_fetch_assoc($nav_result)): ?>
                                     <li class="nav-item <?php echo (basename($_SERVER['PHP_SELF']) == basename($nav['url_nav'])) ? 'active' : ''; ?>">
                                         <a href="<?php echo htmlspecialchars($nav['url_nav']); ?>" class="nav-link">
-                                            <?php echo htmlspecialchars($nav['nama_navbar']); ?>
-                                        </a>
+                                        <?php echo htmlspecialchars($nav['nama_navbar'] ?? 'Menu'); ?>
+                                    </a>
                                     </li>
                                 <?php endwhile; ?>
                         </ul>
