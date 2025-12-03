@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Asisten - Laboratory of Applied Informatics</title>
+    <title>Profil Magang - Laboratory of Applied Informatics</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style-common.css">
     <link rel="stylesheet" href="../style-index.css">
@@ -182,7 +182,7 @@
 <!-- Hero Section -->
 <div class="hero">
     <img src="../img/logo/gedung-sipil.jpg" alt="Gedung Politeknik"/>
-    <h1>PROFIL ASISTEN</h1>
+    <h1>PROFIL MAGANG</h1>
 </div>
 
 <!-- Main Content -->
@@ -191,7 +191,7 @@
         <!-- Avatar Container -->
         <div class="profile-avatar-container">
             <div class="profile-avatar">
-                <img src="../img/avatar-default.png" alt="Avatar Asisten">
+                <img src="../img/avatar-default.png" alt="Avatar Magang">
             </div>
         </div>
 
@@ -199,7 +199,7 @@
         <h2 class="profile-name">Andini Eka Amalia</h2>
 
         <!-- Badge -->
-        <div class="profile-badge">Asif</div>
+        <div class="profile-badge" style="background-color: #54a0ff;">Magang</div>
 
         <!-- Social Links -->
         <div class="profile-social">
