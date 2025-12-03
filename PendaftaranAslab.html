@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Asisten Lab - Applied Informatics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="StyleNavbar.css">
+  <link rel="stylesheet" href="StylePendaftaranAslab.css">
+  <link rel="stylesheet" href="StyleFooter.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <!-- SVG sebagai background -->
+    <div class="nav-bg">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <rect width="1440" height="90" fill="#0A2346" fill-opacity="0.8"/>
+        <path opacity="0.9" d="M0 0H1440C1440 41.4214 1406.42 75 1365 75H75C33.5786 75 0 41.4214 0 0Z" fill="white"/>
+      </svg>
+    </div>
+    <!-- Isi navbar -->
+    <div class="nav-content">
+      <div class="logo">
+        <img src="img/logo/logo.png" alt="logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="Beranda.php">Beranda</a></li>
+          <li><a href="Produk.php">Produk</a></li>
+          <li><a href="Mitra.php">Mitra</a></li>
+          <li><a href="Berita.php">Berita</a></li>
+          <li><a href="Galeri.php">Galeri</a></li>
+          <li><a href="layanan.php">Layanan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="img/logo/gedung-sipil.jpg" alt="hero"/>
+    <h1>PENDAFTARAN</h1>
+  </div>
+
+  <!-- FORM SECTION -->
+  <div class="form-container">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Formulir Pendaftaran Asisten Laboratorium</h2>
+        <p>Laboratorium Teknologi Informasi - Tahun Akademik 2025/2026</p>
+      </div>
+
+      <form action="prosespendaftaranaslab.php" method="POST" enctype="multipart/form-data" class="registration-form">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+          </div>
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="program">Program Studi</label>
+            <select id="program" name="program" required>
+              <option value="">Pilih Program Studi</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi Bisnis">Sistem Informasi Bisnis</option>
+              <option value="Pengembangan Piranti Lunak Situs">Pengembangan Piranti Lunak Situs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester" required>
+              <option value="">Pilih Semester</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telepon">IPK Terakhir</label>
+            <input type="text" id="ipk" name="ipk" placeholder="contoh: 3.50" required>
+          </div>
+        </div>
+
+        <!-- FOTO 3x4 & CV -->
+        <div class="form-row">
+          <div class="form-group file-upload">
+            <label>Foto 3x4</label>
+            <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png" required>
+            <label for="foto" class="file-label">Pilih File</label>
+            <div class="file-info">Format: JPG/PNG (Maks. 2MB)</div>
+          </div>
+
+          <div class="form-group file-upload">
+            <label>Curriculum Vitae (CV)</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            <label for="cv" class="file-label">Pilih File</label>
+            <div class="file-info">Format: PDF/DOC (Maks. 2MB)</div>
+          </div>
+        </div>
+
+        <div class="declaration">
+          <h3 style="color: #0f4d68; margin-bottom: 16px; font-size: 18px;">Pernyataan</h3>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="declare1" name="declare1" required>
+            <label for="declare1">Saya menyatakan bahwa semua data yang diisi adalah benar dan dapat dipertanggungjawabkan.</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="declare2" name="declare2" required>
+            <label for="declare2">Saya bersedia mengikuti semua tahapan seleksi yang ditentukan.</label>
+          </div>
+        </div>
+
+        <button type="submit" name="submit_pendaftaran" class="submit-btn">Kirim Pendaftaran</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // File upload feedback
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+      input.addEventListener('change', function(e) {
+        const label = this.nextElementSibling;
+        if (this.files.length > 0) {
+          label.textContent = this.files[0].name;
+          label.style.background = '#28a745';
+        }
+      });
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-top-border"></div>
+
+    <div class="footer-container">
+
+      <!-- Logo + Deskripsi -->
+      <div class="footer-col footer-logo">
+        <img src="img/logo/logo putih.png" alt="Logo">
+        <p>Laboratorium yang berfokus pada pengembangan dan penerapan ilmu informatika dalam bidang praktis.</p>
+      </div>
+
+      <!-- Menu -->
+      <div class="footer-col">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="Beranda.php">Beranda</a></li>
+          <li><a href="Produk.php">Produk</a></li>
+          <li><a href="Mitra.php">Mitra</a></li>
+          <li><a href="Berita.php">Berita</a></li>
+          <li><a href="Galeri.php">Galeri</a></li>
+          <li><a href="Layanan.php">Layanan</a></li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+      <div class="footer-col">
+        <h4>LAYANAN</h4>
+        <ul>
+          <li>Pendaftaran Asisten Lab</li>
+          <li>Pendaftaran Magang</li>
+          <li>Peminjaman Fasilitas</li>
+        </ul>
+      </div>
+
+      <!-- Jam Kerja -->
+      <div class="footer-col">
+        <h4>JAM KERJA</h4>
+        <ul>
+          <li>Senin – Jumat</li>
+          <li>08.00 – 16.00 WIB</li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.539518640359!2d112.61141517476776!3d-7.943064192081145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78833cae0fc99f%3A0x20d162669317de31!2sGedung%20Pascasarjana%20POLINEMA!5e0!3m2!1sen!2sid!4v1764591400686!5m2!1sen!2sid" 
+          width="360" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <p>
+          <img src="img/footer/email.png"> ailab@polinema.ac.id
+        </p>
+
+        <p>
+          <img src="img/footer/maps.png"> Gedung Pascasarjana Lt. 2<br>
+          Jl. Soekarno Hatta No.9<br>
+          Malang, Jawa Timur 65141
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-border"></div>
+
+    <div class="footer-bottom">
+      Copyright © 2025 Lab Applied Informatics - Politeknik Negeri Malang. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
