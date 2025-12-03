@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="StyleNavbar.css">
   <link rel="stylesheet" href="StylePendaftaranMagang.css">
   <link rel="stylesheet" href="StyleFooter.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- NAVBAR -->
@@ -21,7 +24,7 @@
     <!-- Isi navbar -->
     <div class="nav-content">
       <div class="logo">
-        <img src="img/logo.png" alt="logo">
+        <img src="img/logo/logo.png" alt="logo">
       </div>
       <nav>
         <ul>
@@ -38,7 +41,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="img/gedung-sipil.jpg" alt="hero"/>
+    <img src="img/logo/gedung-sipil.jpg" alt="hero"/>
     <h1>PENDAFTARAN</h1>
   </div>
 
@@ -50,7 +53,7 @@
         <p>Laboratorium Teknologi Informasi - Tahun Akademik 2025/2026</p>
       </div>
 
-      <div class="registration-form">
+      <form action="prosespendaftaran.php" method="POST" enctype="multipart/form-data" class="registration-form">
         <div class="form-row">
           <div class="form-group">
             <label for="nama">Nama Lengkap</label>
@@ -156,9 +159,8 @@
             <label for="declare2">Saya bersedia mengikuti semua tahapan seleksi yang ditentukan.</label>
           </div>
         </div>
-
-        <button type="submit" class="submit-btn">Kirim Pendaftaran</button>
-      </div>
+<button type="submit" name="submit_pendaftaran" class="submit-btn">Kirim Pendaftaran</button>
+</form>
     </div>
   </div>
 
@@ -174,35 +176,6 @@
       });
     });
 
-    // Form submission
-    document.querySelector('.submit-btn').addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Validation check
-      const form = document.querySelector('.registration-form');
-      const inputs = form.querySelectorAll('input[required], select[required]');
-      let isValid = true;
-      
-      inputs.forEach(input => {
-        if (input.type === 'checkbox') {
-          if (!input.checked) isValid = false;
-        } else if (!input.value) {
-          isValid = false;
-        }
-      });
-      
-      if (isValid) {
-        alert('Pendaftaran berhasil dikirim! Kami akan menghubungi Anda segera.');
-        form.reset();
-        // Reset file labels
-        document.querySelectorAll('.file-label').forEach(label => {
-          label.textContent = 'Pilih File';
-          label.style.background = '#FF8A00';
-        });
-      } else {
-        alert('Mohon lengkapi semua field yang wajib diisi!');
-      }
-    });
   </script>
 
   <footer class="footer">
@@ -245,9 +218,6 @@
           <ul>
               <li>Senin – Jumat</li>
               <li>08.00 – 16.00 WIB</li>
-              <br>
-              <li>Istirahat</li>
-              <li>12.00 – 13.00 WIB</li>
           </ul>
       </div>
 
